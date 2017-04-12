@@ -10,7 +10,7 @@ void BulletPool::update(){
     for(int i=0;i<bullets.size();i++){
         if(valid[i]){
             sf::Vector2f pos = bullets[i].getPosition();
-            if(pos.x < -5 || pos.x > WINDOW_WIDTH+5 || pos.y < -5 || pos.y > WINDOW_HEIGHT+5) valid[i] = false;
+            if(pos.x < -20 || pos.x > WINDOW_WIDTH+20 || pos.y < -20 || pos.y > WINDOW_HEIGHT+20) valid[i] = false;
             else bullets[i].update();
         }
     }

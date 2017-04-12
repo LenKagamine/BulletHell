@@ -1,24 +1,23 @@
-#ifndef BULLET_H
-#define BULLET_H
+#ifndef ENEMY_H
+#define ENEMY_H
 
 #include <SFML/Graphics.hpp>
 
 #include "Entity.h"
 
-class Bullet: public Entity {
+class Enemy: public Entity {
     public:
+        bool done;
         sf::CircleShape shape;
 
-        Bullet(double x=0, double y=0, double vx=0, double vy=0);
+        Enemy(double x=0, double y=0, double vx=0, double vy=0);
 
         virtual void update();
         virtual void draw(sf::RenderWindow& window);
 
-        sf::Vector2f getPosition();
-
-        virtual ~Bullet();
+        virtual ~Enemy();
     protected:
     private:
 };
 
-#endif // BULLET_H
+#endif // ENEMY_H

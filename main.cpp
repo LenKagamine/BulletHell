@@ -12,9 +12,6 @@ int main(){
     sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Danmaku Engine");
     window.setFramerateLimit(60);
 
-    //sf::CircleShape shape(100.f);
-    //shape.setFillColor(sf::Color::Green);
-
     Stage stage = Stage();
 
     while(window.isOpen()){ //game loop
@@ -35,7 +32,6 @@ int main(){
         //Draw
         stage.draw(window);
         BulletPool::draw(window);
-        //window.draw(shape);
 
         window.display();
     }

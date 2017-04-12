@@ -1,8 +1,8 @@
 #include "Player.h"
+
 #include <iostream>
 
 #include "BulletPool.h"
-using namespace std;
 
 Player::Player(double x, double y){
     this->x = x;

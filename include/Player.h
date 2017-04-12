@@ -3,17 +3,17 @@
 
 #include <SFML/Graphics.hpp>
 
-class Player{
+#include "Entity.h"
+
+class Player: public Entity {
     public:
-        double x, y;
-        double vx, vy;
         sf::CircleShape shape;
         double radius;
 
         Player(double x=0, double y=0);
 
-        void update();
-        void draw(sf::RenderWindow& window);
+        virtual void update();
+        virtual void draw(sf::RenderWindow& window);
 
         void fire();
 
